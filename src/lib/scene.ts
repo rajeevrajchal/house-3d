@@ -30,12 +30,12 @@ scene.add(gridHelper);
 
 const loader: $FIX_ME = new GLTFLoader();
 loader.load(
-  "src/assets/building/building.glb",
+  "assets/building/building.glb",
   (building: $FIX_ME) => {
     building.scene.scale.set(0.5, 0.5, 0.5);
 
     loader.load(
-      "src/assets/building_assets/coffee_table_001.glb",
+      "assets/building_assets/coffee_table_001.glb",
       (coffee_table: $FIX_ME) => {
         coffee_table.scene.scale.set(2, 2, 2);
         coffee_table.scene.position.set(5, 0, 5);
@@ -44,14 +44,14 @@ loader.load(
     );
 
     loader.load(
-      "src/assets/building_assets/scratching_post_001.glb",
+      "assets/building_assets/scratching_post_001.glb",
       (post: $FIX_ME) => {
         post.scene.scale.set(2, 1.5, 2);
         post.scene.position.set(4, 0, -6);
         post.scene.rotation.y = -Math.PI / 2;
         building.scene.add(post.scene);
         loader.load(
-          "src/assets/building_assets/lamp_001.glb",
+          "assets/building_assets/lamp_001.glb",
           (lamp: $FIX_ME) => {
             lamp.scene.position.set(-0.1, 1.2, 0);
             post.scene.add(lamp.scene);

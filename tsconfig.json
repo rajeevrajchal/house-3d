@@ -14,7 +14,27 @@
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "baseUrl": ".",
+    "paths": {
+      "#root/*": ["."],
+      "@*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@module/*": ["./src/module/*"],
+      "@hook/*": ["./src/hook/*"],
+      "@model/*": ["./src/model/*"],
+      "@enum/*": ["./src/enum/*"],
+      "@service/*": ["./src/service/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@type/*": ["src/type/*"],
+      "@constant/*": ["./src/constant/*"],
+      "@routes/*": ["src/routes/*"],
+      "@validations": ["src/module/auth/validations/*"],
+      "@plugins": ["./src/plugins/*"],
+      "@utils": ["./src/utils/*"],
+      "@api": ["./src/api/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
   "references": [{ "path": "./tsconfig.node.json" }]
